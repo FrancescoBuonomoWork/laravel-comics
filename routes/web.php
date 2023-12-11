@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/layouts/layout', function () {
-    return view('layouts/layout');
-})->name('layout');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('/layouts/layout', function () {
+//     return view('layouts/layout');
+// })->name('layout');
 
-Route::get('/homepage', function () {
+Route::get('/', function () {
     $data = [
         [
             "title" => "Action Comics #1000: The Deluxe Edition",
@@ -135,3 +135,7 @@ Route::get('/homepage', function () {
 
     return view('homepage',["data" => $data]);
 })->name('homepage');
+
+Route::get('/fans', function () {
+     return view('fans');
+})->name('fans');
