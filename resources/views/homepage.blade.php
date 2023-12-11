@@ -4,18 +4,22 @@
 
     <main>
        <div class="container">
-        <div class="row">
+        <div class="row row-gap-3">
+            @foreach ($data as $element)
             <div class="col-2">
                 <div class="card">
-                    {{-- @foreach ($movies as $movie)
+                    
+                    <img src="{{$element['thumb']}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">
+                            {{$element['title']}}
+                        </p>
+                      </div>
 
-                      <p>$movie['title'];</p>  
-                    @endforeach --}}
-                    {{-- <img src="" class="card-img-top" alt="..."> --}}
-
-                    {{ $data }}
+                      {{-- @dd($data); --}}
+                    </div>
                 </div>
-            </div>
+            @endforeach 
         </div>
        </div>
     </main>
