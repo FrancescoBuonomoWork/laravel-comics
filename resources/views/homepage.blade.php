@@ -1,7 +1,9 @@
 @extends('layouts/layout')
 
+@section('title','homepage')
 @section('content')
 
+    @include('partials.jumbo')
     <main>
        <div class="container">
         <div class="row row-gap-3">
